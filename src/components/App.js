@@ -1,6 +1,7 @@
 import React from 'react';
 import '../stylesheets/App.css';
 import {getDataFromApi} from '../services/Api'
+import CartoonsList from './CartoonsList'
 
 class App extends React.Component {
   constructor(props) {
@@ -26,7 +27,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        holiii
+        <CartoonsList
+           cartoonList={this.state.cartoons}
+        />
       </div>
     );
   }
