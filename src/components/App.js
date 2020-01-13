@@ -4,6 +4,7 @@ import {getDataFromApi} from '../services/Api';
 import CartoonsList from './CartoonsList';
 import FilterCartoon from './FilterCartoon';
 import CartoonDetail from './CartoonDetail';
+import Header from './Header'
 import { Route, Switch } from 'react-router-dom';
 
 class App extends React.Component {
@@ -37,23 +38,17 @@ class App extends React.Component {
 
   renderCartoonDetail(props) {
     console.log(props)
-    const selectId = parseInt(props.match.params.id);
+    const selectId = parseInt(props.match.params.id); //url
     let selectCartoons = this.state.cartoons.find(cartoon => cartoon.id === selectId);
     
     return <CartoonDetail cartoons={selectCartoons} />;
     //cartoon puede ser patata
   }
 
-  
-
-  
- 
-  
-
   render() {
     return (
       <div className="App">
-        <h1>Ricky Morty</h1>
+        <Header/>
         <Switch>
           <Route exact path="/">
             <FilterCartoon
