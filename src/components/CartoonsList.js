@@ -4,13 +4,19 @@ import CartoonItem from './CartoonItem'
 const CartoonsList = props =>{
   return(
     <ul>
-      {props.cartoonList.map(cartoon=>{
+      {props.cartoonList
+      //.filter(cartoon => console.log(cartoon))
+        // props.value === '' || cartoon.results.toLowerCase().includes(props.value.toLowerCase()))
+      .map(cartoon=>{
         return(
-        <CartoonItem
-          cartoonImg ={cartoon.image}
-          cartoonName = {cartoon.name}
-          cartoonSpecie={cartoon.species}
-        />
+          <li key={cartoon.id}>
+            <CartoonItem
+              cartoonImg ={cartoon.image}
+              cartoonName = {cartoon.name}
+              cartoonSpecie={cartoon.species}
+              
+            />
+          </li>
         )
       })}
 
