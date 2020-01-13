@@ -3,6 +3,8 @@ import '../stylesheets/App.css';
 import {getDataFromApi} from '../services/Api';
 import CartoonsList from './CartoonsList';
 import FilterCartoon from './FilterCartoon';
+import CartoonDetail from './CartoonDetail';
+import { Route, Switch } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,6 +14,7 @@ class App extends React.Component {
       value:""
     } 
     this.handleSearch = this.handleSearch.bind(this)
+    this.renderCartoonDetail = this.renderCartoonDetail.bind(this)
   }
 
   componentDidMount(){
@@ -31,19 +34,38 @@ class App extends React.Component {
     })
     console.log(value)
   }
+
+  renderCartoonDetail(props) {
+    console.log(props)
+    const selectId = parseInt(props.match.params.id);
+    let selectCartoons = this.state.cartoons.find(cartoon => cartoon.id === selectId);
+    
+    return <CartoonDetail cartoons={selectCartoons} />;
+    //cartoon puede ser patata
+  }
+
+  
+
+  
+ 
   
 
   render() {
     return (
       <div className="App">
-        <FilterCartoon
-         
-         handleSearch={this.handleSearch}
-        />
-        <CartoonsList
-           cartoonList={this.state.cartoons}
-           value={this.state.value}
-        />
+        <h1>Ricky Morty</h1>
+        <Switch>
+          <Route exact path="/">
+            <FilterCartoon
+            handleSearch={this.handleSearch}
+            />
+            <CartoonsList
+              cartoonList={this.state.cartoons}
+              value={this.state.value}
+            />
+          </Route>
+          <Route path ="/:id/" render={this.renderCartoonDetail}></Route>
+        </Switch>
       </div>
     );
   }

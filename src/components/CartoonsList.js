@@ -1,6 +1,7 @@
 import React from 'react';
 import CartoonItem from './CartoonItem'
 
+
 const CartoonsList = props =>{
   
   return(
@@ -9,14 +10,16 @@ const CartoonsList = props =>{
       .filter(cartoon => cartoon.name.toLowerCase().includes(props.value.toLowerCase()))
       .map(cartoon=>{
         return(
-          <li key={cartoon.id}>
-            <CartoonItem
-              cartoonImg ={cartoon.image}
-              cartoonName = {cartoon.name}
-              cartoonSpecie={cartoon.species}
-              
-            />
-          </li>
+         
+            <li key={cartoon.id}>
+              <CartoonItem
+                cartoonImg ={cartoon.image}
+                cartoonName = {cartoon.name}
+                cartoonSpecie={cartoon.species}
+                cartoonId ={cartoon.id}
+              />
+            </li>
+         
         )
       })}
 
