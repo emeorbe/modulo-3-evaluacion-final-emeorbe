@@ -37,11 +37,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <FilterCartoon
-         value={this.state.value}
+         
          handleSearch={this.handleSearch}
         />
         <CartoonsList
            cartoonList={this.state.cartoons}
+           value={this.state.value}
         />
       </div>
     );
