@@ -16,4 +16,5 @@ const CartoonItem = props =>{
   )
 }
 
+
 export default CartoonItem;

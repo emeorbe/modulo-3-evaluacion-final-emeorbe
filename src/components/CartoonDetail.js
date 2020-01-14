@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 const CartoonDetail = props =>{
   console.log(props)
@@ -14,7 +15,15 @@ const CartoonDetail = props =>{
         <span className="cartoon__detail__features">{props.cartoons.origin.name}</span>
         <span className="cartoon__detail__features">{props.cartoons.episode.length}</span>
         <span className="cartoon__detail__features">{props.cartoons.status}</span> 
+        <div className="back">
+          <Link className="link" to="/">Volver</Link>
+        </div>
       </div>
+     
+        
+      
+      
+      
   )
   }
   

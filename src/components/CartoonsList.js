@@ -1,5 +1,6 @@
 import React from 'react';
 import CartoonItem from './CartoonItem';
+import PropTypes from 'prop-types'
 
 
 
@@ -28,4 +29,12 @@ const CartoonsList = props =>{
 }
 
 
-export default CartoonsList;
+CartoonsList.propTypes ={
+
+  cartoonList: PropTypes.array
+
+}
+
+
+
+ export default CartoonsList;

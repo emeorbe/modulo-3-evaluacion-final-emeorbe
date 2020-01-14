@@ -8,13 +8,12 @@
 
 .input__search{
   border: 2px solid rgb(234, 131, 47);
-  width: 200px;
+  width: 250px;
   height: 30px;
   border-radius: 15px;
   margin-bottom: 20px;
 
   @media all and (min-width: 768px){
-    width: 500px;
-    margin-bottom: 50px;
+    width: 300px;
   }
 }
