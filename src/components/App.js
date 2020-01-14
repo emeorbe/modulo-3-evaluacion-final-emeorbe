@@ -40,9 +40,8 @@ class App extends React.Component {
     console.log(props)
     const selectId = parseInt(props.match.params.id); //url
     let selectCartoons = this.state.cartoons.find(cartoon => cartoon.id === selectId);
-    
     return <CartoonDetail cartoons={selectCartoons} />;
-    //cartoon puede ser patata
+   
   }
 
   render() {

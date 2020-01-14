@@ -2,10 +2,10 @@
 //@import 'core/mixins'
 //@import 'core/functions'
 @import 'vendors/normalice';
-@import 'layout/main';
-//@import 'layaout/header';
-@import 'components/filtercartoon.scss';
-@import 'components/cartoonlist.scss';
+@import 'layout/home';
+@import 'components/header';
+@import 'components/filtercartoon';
+@import 'components/cartoonlist';
 @import 'components/cartoonItem';
-@import 'components/cartoondetail.scss';
+@import 'components/cartoondetail';
 

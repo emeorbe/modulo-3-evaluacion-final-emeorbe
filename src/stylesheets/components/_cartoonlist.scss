@@ -1,16 +1,29 @@
 .cartoon__container{
+  max-width: 80%;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 280px);
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-rows:auto;
   grid-gap: 40px;
   justify-content: center;
+  align-items: center;
+
+  @media(min-width: 768px){
+    grid-template-columns: repeat(auto-fit, 350px);
+    grid-gap: 40px;
+  }
+
+  @media(min-width:1200px){
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 40px;
+  }
 }
+
 .cartoon__list{
   width: 350px;
   height: 250px;
-
 }
 
 .cartoon__img{
  width: 100%;
-
 }
