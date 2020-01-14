@@ -1,0 +1,16 @@
+.cartoon__container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 280px);
+  grid-gap: 40px;
+  justify-content: center;
+}
+.cartoon__list{
+  width: 350px;
+  height: 250px;
+
+}
+
+.cartoon__img{
+ width: 100%;
+
+}

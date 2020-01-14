@@ -5,8 +5,8 @@ const FilterCartoon = props =>{
     props.handleSearch(evt.target.value)
   }
   return(
-    <form>
-      <input type='search' onChange={handleSearch} value={props.value} name='search'></input>
+    <form className="form__search">
+      <input className="input__search" type='search' onChange={handleSearch} value={props.value} name='search'></input>
     </form>
   )
 }

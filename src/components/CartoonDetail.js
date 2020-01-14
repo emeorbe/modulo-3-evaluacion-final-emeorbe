@@ -7,7 +7,7 @@ const CartoonDetail = props =>{
   }else{
 
     return(
-      <div>
+      <div className="cartoon__detail">
         <img src={props.cartoons.image} alt={props.cartoons.name}/>
         <h1>{props.cartoons.name}</h1>
         <span>{props.cartoons.species}</span>
