@@ -1,25 +1,37 @@
 .cartoon__item{
   margin: auto;  
-  width: 235px;
+  width: 200px;
   height: 250px;
   align-items: center;
-}
-.cartoon__titte__container{
-  width: 235px;
-  background-color:rgb(252, 250, 119);
-  margin: 0;
+
+  &__container{
+    width: 180px;
+    height: 67px;
+    background-color:rgb(252, 250, 119);
+    
+  }
+
+  &__title{
+    color:rgb(234, 131, 47);
+    font-size: 17px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  &__specie{
+    margin: 0 ;
+    text-align: center;
+    color:rgb(234, 131, 4);
+  }
+
+  &__img{
+    width: 90%;
+  }
+
+  
 }
 
-.cartoon__title{
-  margin: auto;
-  text-align: center;
-  color:rgb(234, 131, 47);
-}
 
-.cartoon__specie{
-  margin: auto;
-  text-align: center;
-  color:rgb(234, 131, 4);
-}
 
   
